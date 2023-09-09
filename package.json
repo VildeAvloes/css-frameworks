@@ -2,13 +2,34 @@
   "name": "css-frameworks",
   "version": "1.0.0",
   "description": "Replace this text with a description of your social media project.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "test": "echo \"We will learn more about testing in the Workflow course\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoroffFEU/css-frameworks-ca.git"
+  },
+  "keywords": [
+    "CSS",
+    "CSS",
+    "Frameworks",
+    "Bootstrap",
+    "SCSS",
+    "SASS"
+  ],
+  "author": "Oliver Dipple <oliver.dipple@noroff.no>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoroffFEU/css-frameworks-ca/issues"
+  },
+  "homepage": "https://github.com/NoroffFEU/css-frameworks-ca#readme",
   "dependencies": {
     "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.66.1"
   }
 }
