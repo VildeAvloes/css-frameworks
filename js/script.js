@@ -24,9 +24,13 @@
   });
 })();
 
-// var myModal = document.getElementById("myModal");
-// var myInput = document.getElementById("myInput");
+//Tabs
+const triggerTabList = document.querySelectorAll("#myTab button");
+triggerTabList.forEach((triggerEl) => {
+  const tabTrigger = new bootstrap.Tab(triggerEl);
 
-// myModal.addEventListener("shown.bs.modal", function () {
-//   myInput.focus();
-// });
+  triggerEl.addEventListener("click", (event) => {
+    event.preventDefault();
+    tabTrigger.show();
+  });
+});
