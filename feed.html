@@ -10,15 +10,15 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md bg-altlight py-3">
-      <div class="container-fluid m-0">
-        <a class="navbar-brand" href="feed.html">
-          <span class="text-primary fw-bold display-5">Hello!</span>
+    <nav class="navbar navbar-expand-md bg-bglight py-1">
+      <div class="container-fluid m-0 justify-content-center">
+        <a class="navbar-brand position-absolute start-0 ps-2" href="feed.html">
+          <span class="text-secondary fw-bold display-5">Hello!</span>
         </a>
         <div class="align-center">
-          <ul class="nav justify-content-center gap-2">
+          <ul class="nav gap-1">
             <li class="nav-item">
-              <a href="feed.html" class="nav-link" aria-current="page">
+              <a href="feed.html" class="nav-link">
                 <i class="bi bi-house-door-fill text-primary display-5"></i>
               </a>
             </li>
@@ -32,11 +32,12 @@
               >
                 <i class="bi bi-person-fill text-primary display-5"></i>
               </a>
-              <ul class="dropdown-menu dropdown-menu-end mt-3">
+              <ul class="dropdown-menu mt-1">
                 <li>
                   <a
                     class="dropdown-item text-primary fw-bold"
                     href="profile.html"
+                    aria-current="page"
                     >My Profile</a
                   >
                 </li>
@@ -49,10 +50,35 @@
                 </li>
               </ul>
             </li>
+            <li
+              class="nav-item"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#searchBar"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <button class="nav-link position-absolute end-0">
+                <i class="bi bi-search text-primary display-5"></i>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div class="collapse" id="searchBar">
+      <div class="card card-body">
+        <form class="d-flex mb-0" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
 
     <section id="intro"></section>
     <script
