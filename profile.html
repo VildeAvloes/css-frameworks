@@ -10,13 +10,29 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md bg-bglight py-1">
-      <div class="container-fluid m-0 justify-content-center">
+    <nav
+      class="navbar navbar-expand-md bg-bglight py-1"
+      aria-labelledy="Main navigation
+    "
+    >
+      <div class="container-fluid m-0 justify-content-end">
         <a class="navbar-brand position-absolute start-0 ps-2" href="feed.html">
           <span class="text-secondary fw-bold display-5">Hello!</span>
         </a>
         <div class="align-center">
           <ul class="nav gap-1">
+            <li
+              class="nav-item"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#searchBar"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <button class="nav-link">
+                <i class="bi bi-search text-primary display-5"></i>
+              </button>
+            </li>
             <li class="nav-item">
               <a href="feed.html" class="nav-link">
                 <i class="bi bi-house-door-fill text-primary display-5"></i>
@@ -32,7 +48,7 @@
               >
                 <i class="bi bi-person-fill text-primary display-5"></i>
               </a>
-              <ul class="dropdown-menu mt-1">
+              <ul class="dropdown-menu dropdown-menu-end mt-1">
                 <li>
                   <a
                     class="dropdown-item text-primary fw-bold"
@@ -49,18 +65,6 @@
                   ></a>
                 </li>
               </ul>
-            </li>
-            <li
-              class="nav-item"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#searchBar"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              <button class="nav-link position-absolute end-0">
-                <i class="bi bi-search text-primary display-5"></i>
-              </button>
             </li>
           </ul>
         </div>
@@ -79,12 +83,17 @@
         </form>
       </div>
     </div>
+
     <section class="container">
-      <div class="row py-4">
-        <div class="col">
-          <img src="assets/vilde.png" alt="" class="rounded float-start w-50" />
+      <div class="row py-4 align-items-center">
+        <div class="col-4">
+          <img
+            src="assets/vilde.png"
+            alt=""
+            class="rounded float-start w-100"
+          />
         </div>
-        <div class="col">
+        <div class="col-8">
           <h1>Vilde Avløs</h1>
           <p>
             Just a girl living in the city trying to catch a glimpse of magic..
@@ -99,55 +108,61 @@
         </div>
       </div>
     </section>
+
     <section class="container-md">
-      <ul
-        class="nav nav-pills mb-3 gap-2 justify-content-center"
-        id="pills-tab"
-        role="tablist"
+      <nav
+        class="navbar justify-content-center"
+        aria-labelledby="Content navigation"
       >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="posts-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#posts"
-            type="button"
-            role="tab"
-            aria-controls="posts"
-            aria-selected="true"
-          >
-            Posts
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="followers-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#followers"
-            type="button"
-            role="tab"
-            aria-controls="followers"
-            aria-selected="false"
-          >
-            Followers
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="following-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#following"
-            type="button"
-            role="tab"
-            aria-controls="following"
-            aria-selected="false"
-          >
-            Following
-          </button>
-        </li>
-      </ul>
+        <ul
+          class="nav mb-3 gap-2 justify-content-center"
+          id="second-navigation"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active fw-bold"
+              id="posts-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#posts"
+              type="button"
+              role="tab"
+              aria-controls="posts"
+              aria-selected="true"
+            >
+              Posts
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-bold"
+              id="followers-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#followers"
+              type="button"
+              role="tab"
+              aria-controls="followers"
+              aria-selected="false"
+            >
+              Followers
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-bold"
+              id="following-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#following"
+              type="button"
+              role="tab"
+              aria-controls="following"
+              aria-selected="false"
+            >
+              Following
+            </button>
+          </li>
+        </ul>
+      </nav>
       <div class="tab-content" id="profileContent">
         <div
           class="tab-pane fade show active"
