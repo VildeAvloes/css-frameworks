@@ -16,24 +16,16 @@
     "
     >
       <div class="container-fluid m-0 justify-content-end">
-        <a class="navbar-brand position-absolute start-0 ps-2" href="feed.html">
+        <a
+          class="navbar-brand position-absolute start-0 ps-2"
+          href="feed.html"
+          aria-label="Go to homepage"
+        >
           <span class="text-secondary fw-bold display-5">Hello!</span>
         </a>
         <div class="align-center">
           <ul class="nav gap-1">
-            <li
-              class="nav-item"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#searchBar"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              <button class="nav-link">
-                <i class="bi bi-search text-primary display-5"></i>
-              </button>
-            </li>
-            <li class="nav-item">
+            <li class="nav-item" aria-label="Go to feed">
               <a href="feed.html" class="nav-link">
                 <i class="bi bi-house-door-fill text-primary display-5"></i>
               </a>
@@ -45,6 +37,7 @@
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                aria-label="My profile"
               >
                 <i class="bi bi-person-fill text-primary display-5"></i>
               </a>
@@ -70,28 +63,11 @@
         </div>
       </div>
     </nav>
-    <div class="collapse" id="searchBar">
-      <div class="card card-body">
-        <form class="d-flex mb-0" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
 
     <section class="container">
       <div class="row py-4 align-items-center">
         <div class="col-4">
-          <img
-            src="assets/vilde.png"
-            alt=""
-            class="rounded float-start w-100"
-          />
+          <img src="assets/vilde.png" alt="" class="rounded w-100" />
         </div>
         <div class="col-8">
           <h1>Vilde Avløs</h1>
@@ -99,7 +75,7 @@
             Just a girl living in the city trying to catch a glimpse of magic..
           </p>
           <button
-            class="btn btn-secondary md-5 col-6"
+            class="btn btn-secondary md-5 col-md-4"
             data-bs-toggle="modal"
             data-bs-target="#"
           >
@@ -114,14 +90,10 @@
         class="navbar justify-content-center"
         aria-labelledby="Content navigation"
       >
-        <ul
-          class="nav mb-3 gap-2 justify-content-center"
-          id="second-navigation"
-          role="tablist"
-        >
+        <ul class="nav mb-3 gap-2" id="second-navigation" role="tablist">
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active fw-bold"
+            <a
+              class="nav-link active fw-bold d-flex flex-column align-items-center"
               id="posts-tab"
               data-bs-toggle="tab"
               data-bs-target="#posts"
@@ -130,26 +102,13 @@
               aria-controls="posts"
               aria-selected="true"
             >
-              Posts
-            </button>
+              <span class="fw-light">10</span>
+              My posts
+            </a>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link fw-bold"
-              id="followers-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#followers"
-              type="button"
-              role="tab"
-              aria-controls="followers"
-              aria-selected="false"
-            >
-              Followers
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link fw-bold"
+            <a
+              class="nav-link fw-bold d-flex flex-column align-items-center"
               id="following-tab"
               data-bs-toggle="tab"
               data-bs-target="#following"
@@ -158,11 +117,28 @@
               aria-controls="following"
               aria-selected="false"
             >
+              <span class="fw-light">11</span>
               Following
-            </button>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold d-flex flex-column align-items-center"
+              id="followers-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#followers"
+              type="button"
+              role="tab"
+              aria-controls="followers"
+              aria-selected="false"
+            >
+              <span class="fw-light">9</span>
+              Followers
+            </a>
           </li>
         </ul>
       </nav>
+
       <div class="tab-content" id="profileContent">
         <div
           class="tab-pane fade show active"
@@ -171,16 +147,98 @@
           aria-labelledby="posts"
           tabindex="0"
         >
-          Posts go here...
-        </div>
-        <div
-          class="tab-pane fade"
-          id="followers"
-          role="tabpanel"
-          aria-labelledby="followers"
-          tabindex="0"
-        >
-          Followers go here...
+          <ul class="row ps-0">
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+            <li class="col-6 col-md-4 btn d-flex align-items-center m1">
+              <a href="#" class="row align-items-center">
+                <img
+                  src="assets/G-soverom-8252-green-harmony.jpeg"
+                  alt=""
+                  class="rounded w-100"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
         <div
           class="tab-pane fade"
@@ -189,7 +247,279 @@
           aria-labelledby="following"
           tabindex="0"
         >
-          Following go here..
+          <ul class="ps-0 list-unstyled">
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Unfollow</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="followers"
+          role="tabpanel"
+          aria-labelledby="followers"
+          tabindex="0"
+        >
+          <ul class="ms-0 list-unstyled">
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+            <li class="btn btn-outline-bglight d-flex align-items-center mb-2">
+              <a href="#" class="row align-items-center text-decoration-none">
+                <div class="col-3 col-md-2">
+                  <img src="assets/vilde.png" alt="" class="rounded w-100" />
+                </div>
+                <div class="col-6">
+                  <p class="fw-bold m-0">Jane Doe</p>
+                </div>
+              </a>
+              <div class="col-3">
+                <button class="btn btn-outline-secondary">Remove</button>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
