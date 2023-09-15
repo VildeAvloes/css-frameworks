@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Feed</title>
     <link rel="stylesheet" href="/css/styles.min.css" />
     <link
       rel="stylesheet"
@@ -10,19 +10,19 @@
     />
   </head>
   <body class="row gx-0">
-    <div class="col-12 col-lg-3 bg-bglight">
+    <div class="col-12 col-md-3 bg-bglight">
       <nav
-        class="navbar navbar-expand-lg bg-bglight d-lg-flex flex-column align-items-start"
+        class="navbar navbar-expand-md bg-bglight d-md-flex flex-column align-items-start"
       >
         <div class="container-fluid pb-1">
-          <a class="navbar-brand" href="feed.html">
+          <a class="navbar-brand" href="/feed/index.html">
             <span class="text-secondary fw-bold display-5">Hello!</span>
           </a>
           <button
             class="navbar-toggler text-primary"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
+            data-bs-target="#main-nav"
             aria-controls="mainNav"
             aria-expanded="false"
             aria-label="Open navigation"
@@ -31,9 +31,9 @@
           </button>
         </div>
 
-        <div class="collapse navbar-collapse d-lg-flex" id="mainNav">
+        <div class="collapse navbar-collapse d-md-flex" id="main-nav">
           <div class="bg-bglight py-1">
-            <ul class="navbar-nav fw-bold d-lg-flex flex-lg-column">
+            <ul class="navbar-nav fw-bold d-lg-flex flex-md-column">
               <li class="nav-item text-primary active mx-2">
                 <a
                   href="/feed/index.html"
@@ -47,7 +47,7 @@
               <li class="nav-item mx-2">
                 <a href="/profile/index.html" class="nav-link text-primary">
                   <i class="bi bi-person-fill m-1 fs-4"></i>
-                  My Profile
+                  Profile
                 </a>
               </li>
               <li class="nav-item mx-2">
@@ -62,340 +62,331 @@
       </nav>
     </div>
 
-    <section class="col-12 col-lg-6 d-flex justify-content-center p-1">
-      <ul class="row ps-0 justify-content-center">
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
+    <section
+      class="col-12 col-md-6 d-flex flex-column justify-content-center px-3"
+    >
+      <div
+        class="d-flex mt-3 pb-3 align-items-center border-bottom border-bg-light"
+      >
+        <div class="col-2">
+          <img
+            src="/assets/profile/woman-profile.jpg"
+            alt="Young woman with long and curly brown hair."
+            class="rounded-circle w-100"
+          />
+        </div>
+        <div class="col-8 ms-3">
+          <h1 class="fw-light fs-5">@vildeavlos</h1>
+        </div>
+      </div>
+      <form class="d-flex mb-0 mt-3" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <div class="d-flex justify-content-between alig mt-3">
+        <div>
+          <button
+            class="btn btn-secondary"
+            data-bs-toggle="modal"
+            data-bs-target="#create-post"
+          >
+            <i class="bi bi-plus-lg me-1"></i>
+            Create Post
+          </button>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Latest</a></li>
+            <li><a class="dropdown-item" href="#">Oldest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="ps-0 list-unstyled">
+        <li class="card py-2 my-3 border-bg-light">
+          <div class="d-flex align-items-center mb-3 mx-2">
+            <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/vilde.png"
-                  alt=""
+                  src="/assets/profile/cute-dog.jpg"
+                  alt="A golden retriever sitting down and smiling to the camera. "
                   class="rounded-circle w-100"
                 />
               </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
+              <h5 class="card-title ms-3">cutedogs</h5>
             </div>
           </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
+          <img
+            src="/assets/posts/corgi.jpg"
+            alt="Corgi walking on railroads smiling happily in the rain."
+            class="img-fluid"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-heart fs-4 me-2"></i>
+              <i class="bi bi-chat-right fs-4 ms-2"></i>
             </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              doloremque!
+              <span class="fw-bold">#happy #dogs #cuteness #corgi</span>
+            </p>
+            <p class="card-text">
+              <small class="text-muted">1 hour ago</small>
+            </p>
           </div>
         </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
+
+        <li class="card py-2 my-3 border-bg-light">
+          <div class="d-flex align-items-center mb-3 mx-2">
+            <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/vilde.png"
-                  alt=""
+                  src="/assets/profile/woman-drawing-profile.jpg"
+                  alt="Drawing of a blonde woman with eyes closed."
                   class="rounded-circle w-100"
                 />
               </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
+              <h5 class="card-title ms-3">girlwithapencil</h5>
             </div>
           </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
+          <img
+            src="/assets/posts/flower-drawing.jpg"
+            alt="Drawing of flowers in soft pastel colours and a white background."
+            class="img-fluid"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-heart fs-4 me-2"></i>
+              <i class="bi bi-chat-right fs-4 ms-2"></i>
             </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              doloremque!
+              <span class="fw-bold"
+                >#art #pastels #drawing #inspiration #flowers #spring</span
               >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
+            </p>
+            <p class="card-text">
+              <small class="text-muted">2 days ago</small>
+            </p>
           </div>
         </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
+        <li class="card py-2 my-3 border-bg-light">
+          <div class="d-flex align-items-center mb-3 mx-2">
+            <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/vilde.png"
-                  alt=""
+                  src="/assets/profile/cute-dog.jpg"
+                  alt="Closup of a puppy lying down looking up with huge brown eyes."
                   class="rounded-circle w-100"
                 />
               </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
+              <h5 class="card-title ms-3">cutedogs</h5>
             </div>
           </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
+          <img src="/assets/posts/puppy.jpg" alt="" class="img-fluid" />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-heart fs-4 me-2"></i>
+              <i class="bi bi-chat-right fs-4 ms-2"></i>
             </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              doloremque!
+              <span class="fw-bold">#happy #dogs #cuteness #cockerspaniel</span>
+            </p>
+            <p class="card-text">
+              <small class="text-muted"> 6 days ago</small>
+            </p>
           </div>
         </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
+        <li class="card py-2 my-3 border-bg-light">
+          <div class="d-flex align-items-center mb-3 mx-2">
+            <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/vilde.png"
-                  alt=""
+                  src="/assets/profile/yoga-profile.jpg"
+                  alt="Woman meditating facing a lake."
                   class="rounded-circle w-100"
                 />
               </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
+              <h5 class="card-title ms-3">yogaemeilia</h5>
             </div>
           </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
+          <img
+            src="/assets/posts/woman-yoga.jpg"
+            alt="A woman doing yoga on a mountain next to the ocean. She is standing on the hands."
+            class="img-fluid"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-heart fs-4 me-2"></i>
+              <i class="bi bi-chat-right fs-4 ms-2"></i>
             </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              doloremque!
+              <span class="fw-bold">#healthy #yoga #spirit #mindfullness</span>
+            </p>
+            <p class="card-text">
+              <small class="text-muted"> 2 weeks ago</small>
+            </p>
           </div>
         </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
+        <li class="card py-2 my-3 border-bg-light">
+          <div class="d-flex align-items-center mb-3 mx-2">
+            <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/vilde.png"
-                  alt=""
+                  src="/assets/profile/yoga-profile.jpg"
+                  alt="Woman meditating facing a lake."
                   class="rounded-circle w-100"
                 />
               </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
+              <h5 class="card-title ms-3">yogaemeilia</h5>
             </div>
           </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
+          <img
+            src="/assets/posts/woman.jpg"
+            alt="A woman standing in the sunset by the ocean reaching her hands out to both sides."
+            class="img-fluid"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-heart fs-4 me-2"></i>
+              <i class="bi bi-chat-right fs-4 ms-2"></i>
             </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              doloremque!
+              <span class="fw-bold"
+                >#healthy #freedom #spirit #mindfullness</span
               >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="col-5 col-md-3 card py-2 px-1 m-2 border-bg-light">
-          <div role="button" data-bs-toggle="modal" data-bs-target="#postModal">
-            <div class="d-flex align-items-center mb-2 mx-1">
-              <div class="col-3 col-md-2">
-                <img
-                  src="/assets/vilde.png"
-                  alt=""
-                  class="rounded-circle w-100"
-                />
-              </div>
-              <h5 class="card-title">Jane Doe</h5>
-            </div>
-            <img
-              src="/assets/G-soverom-8252-green-harmony.jpeg"
-              alt=""
-              class="img-fluid"
-            />
-            <div class="card-body p-2">
-              <div
-                class="d-flex align-items-center justify-content-between mb-2"
-              >
-                <i class="bi bi-heart fs-4"></i>
-                <p class="card-text">
-                  <small class="text-muted">3 minutes ago</small>
-                </p>
-              </div>
-            </div>
+            </p>
+            <p class="card-text">
+              <small class="text-muted"> 1 month ago</small>
+            </p>
           </div>
         </li>
       </ul>
     </section>
 
-    <section class="col-12 col-lg-3">
-      <p>Her blir det en search bar</p>
-      <p>Her blir det en create post</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nobis,
-        harum dolores unde ex expedita obcaecati esse, asperiores in repellat
-        tempora. Nesciunt aspernatur vero corporis veniam in doloremque odio
-        vel.
-      </p>
+    <section class="col-12 col-md-3 d-none d-md-flex position-fixed end-0">
+      <div class="flex-column">
+        <h2 class="text-primary mt-3">Trending tags</h2>
+        <ul class="d-flex flex-wrap mx-1 list-unstyled fs-5">
+          <li class="m-1">
+            <a href="#"> #fashion </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #happy </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #music </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #fitness </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #fun </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #cafe </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #memes </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #nature </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #friendshipgoals </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #viral </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #cuteness </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #fashion </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #learning </a>
+          </li>
+
+          <li class="m-1">
+            <a href="#"> #relationship </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #skincare </a>
+          </li>
+          <li class="m-1">
+            <a href="#"> #travel </a>
+          </li>
+        </ul>
+      </div>
     </section>
+
+    <div
+      class="modal fade"
+      id="create-post"
+      tabindex="-1"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <h2 class="modal-title">New post</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="/feed/index.html" class="needs-validation">
+              <div class="mb-4">
+                <label for="formFile" class="form-label">Image:</label>
+                <input class="form-control" type="file" id="formFile" />
+              </div>
+              <div class="mb-4">
+                <label for="text-content" class="form-label"> Text:</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  name="text-content"
+                  id="text-content"
+                >
+                </textarea>
+              </div>
+
+              <div class="mb-4">
+                <button type="submit" class="btn btn-secondary">
+                  Add post
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
