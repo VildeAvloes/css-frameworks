@@ -20,9 +20,13 @@ _Built With_
 
 ## Getting Started
 
-### Installing
+At first clone the repo:
 
 `git clone git@github.com:VildeAvloes/portofolio-VildeAvloes`
+
+### Installing
+
+Install dependencies:
 
 `npm install`
 
