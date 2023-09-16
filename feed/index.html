@@ -3,16 +3,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feed</title>
-    <link rel="stylesheet" href="/css/styles.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="../dist/css/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="row gx-0">
-    <div class="col-12 col-md-3 bg-bglight">
+    <div class="col-12 col-md-3 bg-light">
       <nav
-        class="navbar navbar-expand-md bg-bglight d-md-flex flex-column align-items-start"
+        class="navbar navbar-expand-md bg-light d-md-flex flex-column align-items-start"
       >
         <div class="container-fluid pb-1">
           <a class="navbar-brand" href="/feed/index.html">
@@ -32,26 +33,22 @@
         </div>
 
         <div class="collapse navbar-collapse d-md-flex" id="main-nav">
-          <div class="bg-bglight py-1">
+          <div class="bg-light py-1">
             <ul class="navbar-nav fw-bold d-lg-flex flex-md-column">
-              <li class="nav-item text-primary active mx-2">
-                <a
-                  href="/feed/index.html"
-                  class="nav-link text-primary"
-                  aria-current="page"
-                >
+              <li class="nav-item active mx-2">
+                <a href="/feed/index.html" class="nav-link" aria-current="page">
                   <i class="bi bi-house-door-fill m-1 fs-4"></i>
                   Home
                 </a>
               </li>
               <li class="nav-item mx-2">
-                <a href="/profile/index.html" class="nav-link text-primary">
+                <a href="/profile/index.html" class="nav-link">
                   <i class="bi bi-person-fill m-1 fs-4"></i>
                   Profile
                 </a>
               </li>
               <li class="nav-item mx-2">
-                <a href="../index.html" class="nav-link text-primary">
+                <a href="../index.html" class="nav-link">
                   <i class="bi bi-power m-1 fs-4"></i>
                   Log Out
                 </a>
@@ -65,12 +62,10 @@
     <section
       class="col-12 col-md-6 d-flex flex-column justify-content-center px-3"
     >
-      <div
-        class="d-flex mt-3 pb-3 align-items-center border-bottom border-bg-light"
-      >
+      <div class="d-flex mt-3 pb-3 align-items-center border-bottom">
         <div class="col-2">
           <img
-            src="/assets/profile/woman-profile.jpg"
+            src="/src/assets/profile/woman-profile.jpg"
             alt="Young woman with long and curly brown hair."
             class="rounded-circle w-100"
           />
@@ -116,12 +111,12 @@
       </div>
 
       <ul class="ps-0 list-unstyled">
-        <li class="card py-2 my-3 border-bg-light">
+        <li class="card py-2 my-3">
           <div class="d-flex align-items-center mb-3 mx-2">
             <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/profile/cute-dog.jpg"
+                  src="/src/assets/profile/cute-dog.jpg"
                   alt="A golden retriever sitting down and smiling to the camera. "
                   class="rounded-circle w-100"
                 />
@@ -130,7 +125,7 @@
             </div>
           </div>
           <img
-            src="/assets/posts/corgi.jpg"
+            src="/src/assets/posts/corgi.jpg"
             alt="Corgi walking on railroads smiling happily in the rain."
             class="img-fluid"
           />
@@ -150,12 +145,12 @@
           </div>
         </li>
 
-        <li class="card py-2 my-3 border-bg-light">
+        <li class="card py-2 my-3">
           <div class="d-flex align-items-center mb-3 mx-2">
             <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/profile/woman-drawing-profile.jpg"
+                  src="/src/assets/profile/woman-drawing-profile.jpg"
                   alt="Drawing of a blonde woman with eyes closed."
                   class="rounded-circle w-100"
                 />
@@ -164,7 +159,7 @@
             </div>
           </div>
           <img
-            src="/assets/posts/flower-drawing.jpg"
+            src="/src/assets/posts/flower-drawing.jpg"
             alt="Drawing of flowers in soft pastel colours and a white background."
             class="img-fluid"
           />
@@ -185,20 +180,24 @@
             </p>
           </div>
         </li>
-        <li class="card py-2 my-3 border-bg-light">
+        <li class="card py-2 my-3">
           <div class="d-flex align-items-center mb-3 mx-2">
             <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/profile/cute-dog.jpg"
-                  alt="Closup of a puppy lying down looking up with huge brown eyes."
+                  src="/src/assets/profile/cute-dog.jpg"
+                  alt="A golden retriever sitting down and smiling to the camera."
                   class="rounded-circle w-100"
                 />
               </div>
               <h5 class="card-title ms-3">cutedogs</h5>
             </div>
           </div>
-          <img src="/assets/posts/puppy.jpg" alt="" class="img-fluid" />
+          <img
+            src="/src/assets/posts/puppy.jpg"
+            alt="Close up of a puppy lying down looking up with huge brown eyes."
+            class="img-fluid"
+          />
           <div class="card-body">
             <div class="d-flex align-items-center mb-2">
               <i class="bi bi-heart fs-4 me-2"></i>
@@ -214,12 +213,12 @@
             </p>
           </div>
         </li>
-        <li class="card py-2 my-3 border-bg-light">
+        <li class="card py-2 my-3">
           <div class="d-flex align-items-center mb-3 mx-2">
             <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/profile/yoga-profile.jpg"
+                  src="/src/assets/profile/yoga-profile.jpg"
                   alt="Woman meditating facing a lake."
                   class="rounded-circle w-100"
                 />
@@ -228,7 +227,7 @@
             </div>
           </div>
           <img
-            src="/assets/posts/woman-yoga.jpg"
+            src="/src/assets/posts/woman-yoga.jpg"
             alt="A woman doing yoga on a mountain next to the ocean. She is standing on the hands."
             class="img-fluid"
           />
@@ -247,12 +246,12 @@
             </p>
           </div>
         </li>
-        <li class="card py-2 my-3 border-bg-light">
+        <li class="card py-2 my-3">
           <div class="d-flex align-items-center mb-3 mx-2">
             <div class="d-flex align-items-center">
               <div class="col-3 col-md-2">
                 <img
-                  src="/assets/profile/yoga-profile.jpg"
+                  src="/src/assets/profile/yoga-profile.jpg"
                   alt="Woman meditating facing a lake."
                   class="rounded-circle w-100"
                 />
@@ -261,7 +260,7 @@
             </div>
           </div>
           <img
-            src="/assets/posts/woman.jpg"
+            src="/src/assets/posts/woman.jpg"
             alt="A woman standing in the sunset by the ocean reaching her hands out to both sides."
             class="img-fluid"
           />
@@ -387,11 +386,5 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
