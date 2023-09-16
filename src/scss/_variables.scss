@@ -3,7 +3,11 @@ $primary: #02474d;
 $secondary: #217b7e;
 $light: #e4eded;
 
-$border-color: $light;
+//Nav
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $secondary;
+
+//Borders$border-color: $light;
 
 //Links
 $link-color: $primary;
