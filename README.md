@@ -22,10 +22,8 @@ _Built With_
 
 ### Installing
 
-Clone the repo:
 `git clone git@github.com:VildeAvloes/portofolio-VildeAvloes`
 
-Install dependencies:
 `npm install`
 
 ### Running
