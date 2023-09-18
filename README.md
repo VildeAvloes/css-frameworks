@@ -1,6 +1,6 @@
 # Hello!
 
-## _CSS Frameworks_CA_
+## _CSS Frameworks_CA
 
 ![A screenshot of the portofolio page.](/src/assets/css-frameworks-screenshot.png)
 
