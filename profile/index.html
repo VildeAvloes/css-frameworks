@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="row justify-content-space-between gx-0">
+  <body class="row gx-0">
     <div class="col-12 col-md-3 bg-light">
       <nav
         class="navbar navbar-expand-md bg-light d-md-flex flex-column align-items-start sticky-md-top"
@@ -61,31 +61,25 @@
       </nav>
     </div>
 
-    <section
-      class="col-12 col-md-9 d-flex flex-column justify-content-center px-3"
-    >
-      <div class="d-flex py-4 align-items-center">
-        <div class="col-3">
+    <section class="col-12 col-md-9 justify-content-center px-3">
+      <div class="row py-4 align-items-center">
+        <div class="col-4">
           <img
             src="/src/assets/profile/woman-profile.jpg"
             alt="Profile photo for Tigerlily. A photo of a young woman with long and curly brown hair."
             class="rounded-circle w-100"
           />
         </div>
-        <div class="col-6 container ms-3">
+        <div class="col-6 container mx-3 p-0">
           <h1 class="fw-light">@tigerlily</h1>
           <p class="fw-light mb-0">Iris Doe</p>
-          <p class="">
+          <p>
             Just a girl living in the city trying to catch a glimpse of magic
             that the earth has to offer. And yeah.. I'm a morning person!
           </p>
-          <button
-            class="btn btn-secondary md-5 col-md-4"
-            data-bs-toggle="modal"
-            data-bs-target="#"
-          >
-            Follow
-          </button>
+          <div class="row">
+            <button class="btn btn-secondary col-md-4">Follow</button>
+          </div>
         </div>
       </div>
       <div>
@@ -150,11 +144,11 @@
             aria-labelledby="posts"
             tabindex="0"
           >
-            <div class="d-flex justify-content-center">
+            <div class="row justify-content-center">
               <ul class="ps-0 list-unstyled col-md-6 mt-3">
                 <li class="card py-2 my-3">
-                  <div class="d-flex align-items-center mb-3 mx-2">
-                    <div class="d-flex align-items-center">
+                  <div class="align-items-center mb-3 mx-2">
+                    <div class="row align-items-center">
                       <div class="col-3 col-md-2">
                         <img
                           src="/src/assets/profile/woman-profile.jpg"
@@ -162,7 +156,7 @@
                           class="rounded-circle w-100"
                         />
                       </div>
-                      <p class="card-title ms-3 fs-5">tigerlily</p>
+                      <p class="card-title fs-5 col-5">tigerlily</p>
                     </div>
                   </div>
                   <img
@@ -190,8 +184,8 @@
                 </li>
 
                 <li class="card py-2 my-3">
-                  <div class="d-flex align-items-center mb-3 mx-2">
-                    <div class="d-flex align-items-center">
+                  <div class="align-items-center mb-3 mx-2">
+                    <div class="row align-items-center">
                       <div class="col-3 col-md-2">
                         <img
                           src="/src/assets/profile/woman-profile.jpg"
@@ -199,7 +193,7 @@
                           class="rounded-circle w-100"
                         />
                       </div>
-                      <p class="card-title ms-3 fs-5">tigerlily</p>
+                      <p class="card-title fs-5 col-5">tigerlily</p>
                     </div>
                   </div>
                   <img
@@ -224,8 +218,8 @@
                   </div>
                 </li>
                 <li class="card py-2 my-3">
-                  <div class="d-flex align-items-center mb-3 mx-2">
-                    <div class="d-flex align-items-center">
+                  <div class="align-items-center mb-3 mx-2">
+                    <div class="row align-items-center">
                       <div class="col-3 col-md-2">
                         <img
                           src="/src/assets/profile/woman-profile.jpg"
@@ -233,7 +227,7 @@
                           class="rounded-circle w-100"
                         />
                       </div>
-                      <p class="card-title ms-3 fs-5">tigerlily</p>
+                      <p class="card-title fs-5 col-5">tigerlily</p>
                     </div>
                   </div>
                   <img
@@ -261,8 +255,8 @@
                   </div>
                 </li>
                 <li class="card py-2 my-3">
-                  <div class="d-flex align-items-center mb-3 mx-2">
-                    <div class="d-flex align-items-center">
+                  <div class="align-items-center mb-3 mx-2">
+                    <div class="row align-items-center">
                       <div class="col-3 col-md-2">
                         <img
                           src="/src/assets/profile/woman-profile.jpg"
@@ -270,7 +264,7 @@
                           class="rounded-circle w-100"
                         />
                       </div>
-                      <p class="card-title ms-3 fs-5">tigerlily</p>
+                      <p class="card-title fs-5 col-5">tigerlily</p>
                     </div>
                   </div>
                   <img
@@ -306,14 +300,14 @@
             aria-labelledby="following"
             tabindex="0"
           >
-            <div class="d-flex justify-content-center">
+            <div class="row justify-content-center">
               <ul class="ps-0 list-unstyled col-md-6 mt-3">
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/cute-dog.jpg"
                           alt="Profile photo for cutedogs. A picture of a golden retriever sitting down and smiling to the camera."
@@ -321,59 +315,55 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">cutedogs</p>
+                      <p class="fw-bold mb-0 col-5 text-start">cutedogs</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/man-photographer.jpg"
                           alt="A profile photo for charlieangelo. A man in profile lying down with a camera in front of his face.  "
                           class="rounded-circle w-100"
                         />
                       </div>
-
-                      <p class="fw-bold ms-3 mb-0">charlieangelo</p>
+                      <p class="fw-bold col-5 mb-0 text-start">charlieangelo</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-artistic.jpg"
                           alt="Profile photo for makeupbymariam. A dark haired woman in profile with close eyes with golden makeup on eyelids. "
                           class="rounded-circle w-100"
                         />
                       </div>
-
-                      <p class="fw-bold ms-3 mb-0">makeupbymariam</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        makeupbymariam
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-cool.jpg"
                           alt="A woman with sunglasses thats holding out her long, blonde hair."
@@ -381,19 +371,19 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">angelicaskylar</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        angelicaskylar
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-drawing-profile.jpg"
                           alt="Profile photo for girlwithapencil. A drawing of a blonde woman with eyes closed."
@@ -401,32 +391,29 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">girlwithapencil</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        girlwithapencil
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/yoga-profile.jpg"
                           alt="Profile photo for yogaemilia. A woman sitting down and meditating facing a lake."
                           class="rounded-circle w-100"
                         />
                       </div>
-
-                      <p class="fw-bold ms-3 mb-0">yogaemilia</p>
+                      <p class="fw-bold col-5 mb-0 text-start">yogaemilia</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Unfollow</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Unfollow</button>
                 </li>
               </ul>
             </div>
@@ -439,14 +426,14 @@
             aria-labelledby="followers"
             tabindex="0"
           >
-            <div class="d-flex justify-content-center">
+            <div class="row justify-content-center">
               <ul class="ps-0 list-unstyled col-md-6 mt-3">
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/cute-dog.jpg"
                           alt="Profile photo for cutedogs. A picture of a golden retriever sitting down and smiling to the camera. "
@@ -454,19 +441,17 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">cutedogs</p>
+                      <p class="fw-bold col-5 mb-0 text-start">cutedogs</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/man-photographer.jpg"
                           alt="Profile photo for charlieangelo. A man in profile lying down with a camera in front of his face. "
@@ -474,19 +459,17 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">charlieangelo</p>
+                      <p class="fw-bold col-5 mb-0 text-start">charlieangelo</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-artistic.jpg"
                           alt="Profile photo for makeupbymariam. A dark haired woman in profile with close eyes with golden makeup on eyelids. "
@@ -494,19 +477,19 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">makeupbymariam</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        makeupbymariam
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-cool.jpg"
                           alt="Profile photo for angelicaskylar. A woman with sunglasses thats holding out her long, blonde hair."
@@ -514,19 +497,20 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">angelicaskylar</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        angelicaskylar
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/woman-drawing-profile.jpg"
                           alt="Profile photo for girlwithapencil. A drawing of a blonde woman with eyes closed."
@@ -534,19 +518,19 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">girlwithapencil</p>
+                      <p class="fw-bold col-5 mb-0 text-start">
+                        girlwithapencil
+                      </p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/yoga-profile.jpg"
                           alt="Profile photo for yogaemilia. A woman sitting down and meditating facing a lake."
@@ -554,19 +538,17 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">yogaemilia</p>
+                      <p class="fw-bold col-5 mb-0 text-start">yogaemilia</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
                 <li
-                  class="btn btn-outline-light d-flex justify-content-between align-items-center mb-2"
+                  class="btn btn-outline-light align-items-center d-flex justify-content-between mb-2"
                 >
                   <a href="#" class="row align-items-center">
-                    <div class="d-flex align-items-center">
-                      <div class="col-2">
+                    <div class="row align-items-center">
+                      <div class="col-3">
                         <img
                           src="/src/assets/profile/man-profile.jpg"
                           alt="Profile photo for andy_91. A selfie of a blonde man with sunglasses."
@@ -574,12 +556,10 @@
                         />
                       </div>
 
-                      <p class="fw-bold ms-3 mb-0">andy_91</p>
+                      <p class="fw-bold col-5 mb-0 text-start">andy_91</p>
                     </div>
                   </a>
-                  <div class="col-3">
-                    <button class="btn btn-outline-secondary">Remove</button>
-                  </div>
+                  <button class="btn btn-outline-secondary">Remove</button>
                 </li>
               </ul>
             </div>
