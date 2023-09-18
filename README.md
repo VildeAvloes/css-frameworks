@@ -22,7 +22,7 @@ _Built With_
 
 At first clone the repo:
 
-`git clone git@github.com:VildeAvloes/css/frameworks`
+`git clone git@github.com:VildeAvloes/css-frameworks-ca`
 
 ### Installing
 
