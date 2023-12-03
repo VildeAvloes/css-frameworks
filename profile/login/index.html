@@ -10,6 +10,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
   </head>
   <body class="row gx-0">
     <div class="col-12">
@@ -21,72 +22,61 @@
         </div>
       </nav>
 
-      <section class="col-12 col-md-9 justify-content-center px-3">
-        <div class="row py-4 align-items-center">
-          <div class="col-12 p-4 bg-white align-items-center">
-            <div class="col-md-8">
-              <div class="text-center">
-                <h1>Sign in</h1>
+      <section class="justify-content-center px-3">
+        <div class="row py-4 d-flex flex-column align-items-center">
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="text-center">
+              <h1>Sign in</h1>
+            </div>
+
+            <form id="loginForm">
+              <div class="mb-4 form-floating">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="You must register with an email from @noroff.no or @stud.noroff.no. Example: janedoe@stud.noroff.no"
+                  required
+                />
+                <label for="email" class="form-label">
+                  <i class="bi bi-envelope-fill text-primary"></i>
+                  Email address
+                </label>
               </div>
-              <form action="/profile/index.html" class="needs-validation">
-                <div class="mb-4 form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="E.g. janedoe@example.com"
-                    required
-                  />
-                  <label for="email" class="form-label">
-                    <i class="bi bi-envelope-fill text-primary"></i>
-                    Email address
-                  </label>
-                  <div class="valid-feedback"></div>
-                  <div class="invalid-feedback">
-                    Please fill in a valid email address.
-                  </div>
-                </div>
 
-                <div class="mb-4 form-floating">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    placeholder="E.g. Jane Doe"
-                    minlength="8"
-                    required
-                  />
-                  <label for="password" class="form-label">
-                    <i class="bi bi-lock-fill text-primary"></i>
-                    Password
-                  </label>
-                  <div class="valid-feedback"></div>
-                  <div class="invalid-feedback">
-                    The password needs to contain 8 characters.
-                  </div>
-                </div>
+              <div class="mb-4 form-floating">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  minlength="8"
+                  title="You password must contain at least 8 characters."
+                  required
+                />
+                <label for="password" class="form-label">
+                  <i class="bi bi-lock-fill text-primary"></i>
+                  Password
+                </label>
+              </div>
 
-                <div class="row mb-4 text-center">
-                  <button
-                    type="submit"
-                    class="btn btn-lg btn-primary col-6 mx-auto"
-                  >
-                    Sign in
-                  </button>
-                </div>
-              </form>
-              <div class="text-center">
-                <p class="fw-light fst-italic mb-1">Not a member yet?</p>
-                <div class="row">
-                  <a
-                    href="/profile/register/index.html"
-                    class="btn btn-lg btn-secondary col-6 mx-auto mb-4"
-                    tabindex="-1"
-                    role="button"
-                  >
-                    Register here
-                  </a>
-                </div>
+              <div class="row mb-4 justify-content-center">
+                <button type="submit" class="btn btn-lg btn-primary col-6">
+                  Sign in
+                </button>
+              </div>
+            </form>
+            <div class="text-center">
+              <p class="fw-light fst-italic mb-1">Not a member yet?</p>
+              <div class="row">
+                <a
+                  href="/profile/register/"
+                  class="btn btn-lg btn-secondary col-6 mx-auto mb-4"
+                  tabindex="-1"
+                  role="button"
+                >
+                  Register here
+                </a>
               </div>
             </div>
           </div>
