@@ -14,6 +14,7 @@
   </head>
   <body class="row gx-0">
     <div class="col-12 col-md-3 bg-light">
+      <!-- nav -->
       <nav
         class="navbar navbar-expand-md bg-light d-md-flex flex-column align-items-start sticky-md-top"
       >
@@ -64,10 +65,10 @@
     <section class="col-12 col-md-9 justify-content-center px-3">
       <div class="col-12 col-md-8 col-lg-5">
         <div class="text-center">
-          <h1>Edit post</h1>
+          <h1>Create post</h1>
         </div>
 
-        <form id="updatePost">
+        <form id="createPost">
           <div class="mb-4 form-floating">
             <input type="text" name="title" class="form-control" required />
             <label class="form-label" for="title"> Title </label>
@@ -75,21 +76,23 @@
 
           <div class="mb-4 form-floating">
             <textarea name="body" class="form-control" required></textarea>
-            <label class="form-label" for="text-content">Body</label>
+            <label class="form-label" for="body">Body</label>
           </div>
 
           <div class="mb-4 form-floating">
             <input type="text" name="tags" class="form-control" />
-            <label class="form-label" for="tags">Tags</label>
+            <label class="form-label" for="tags">Tags </label>
           </div>
 
           <div class="mb-4 form-floating">
             <input type="url" name="media" class="form-control" />
-            <label class="form-label" for="media">Media</label>
+            <label class="form-label" for="media"> Media </label>
           </div>
 
           <div class="row mb-4 justify-content-center">
-            <button class="btn btn-primary btn-lg col-6">Update post</button>
+            <button type="submit" class="btn btn-primary btn-lg col-6">
+              Create post
+            </button>
           </div>
         </form>
       </div>

@@ -87,14 +87,15 @@
       </form>
       <div class="d-flex justify-content-between alig mt-3">
         <div>
-          <button
+          <a
+            href="/post/create/"
             class="btn btn-secondary"
-            data-bs-toggle="modal"
-            data-bs-target="#create-post"
+            tabindex="-1"
+            role="button"
           >
             <i class="bi bi-plus-lg me-1"></i>
             Create Post
-          </button>
+          </a>
         </div>
         <div class="dropdown">
           <button
@@ -173,51 +174,5 @@
         </ul>
       </div>
     </section>
-
-    <div
-      class="modal fade"
-      id="create-post"
-      tabindex="-1"
-      aria-labelledby="modal-title"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content p-3">
-          <div class="modal-header">
-            <h2 class="modal-title">New post</h2>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form action="/feed/index.html" class="needs-validation">
-              <div class="mb-4">
-                <label for="formFile" class="form-label">Image:</label>
-                <input class="form-control" type="file" id="formFile" />
-              </div>
-              <div class="mb-4">
-                <label for="text-content" class="form-label"> Text:</label>
-                <textarea
-                  type="text"
-                  class="form-control"
-                  name="text-content"
-                  id="text-content"
-                >
-                </textarea>
-              </div>
-
-              <div class="mb-4">
-                <button type="submit" class="btn btn-secondary">
-                  Add post
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

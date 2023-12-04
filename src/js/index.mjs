@@ -1,24 +1,28 @@
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
-import * as postMethods from "./api/posts/index.mjs";
-import * as templates from "./templates/index.mjs";
+import * as listeners from "./handlers/index.mjs";
+// import { createPost } from "./api/posts/create.mjs";
+// import * as postMethods from "./api/posts/index.mjs";
+// import * as templates from "./templates/index.mjs";
 
 const path = location.pathname;
 
 if (path === "/profile/login/") {
-  setLoginFormListener();
+  listeners.setLoginFormListener();
 } else if (path === "/profile/register/") {
-  setRegisterFormListener();
+  listeners.setRegisterFormListener();
+} else if (path === "/post/create/") {
+  listeners.setCreatePostFormListener();
+} else if (path === "/post/edit/") {
+  listeners.setUpdatePostFormListener();
 }
 
-async function testTemplates() {
-  const posts = await postMethods.getPosts();
-  const post = posts[45];
-  const container = document.querySelector("#postFeed");
-  templates.renderPostTemplates(posts, container);
-}
+// async function testTemplates() {
+//   const posts = await postMethods.getPosts();
+//   const post = posts[45];
+//   const container = document.querySelector("#postFeed");
+//   templates.renderPostTemplates(posts, container);
+// }
 
-testTemplates();
+// testTemplates();
 
 // async function testTemplate() {
 //   const posts = await postMethods.getPosts();
@@ -35,8 +39,7 @@ testTemplates();
 // post.getPost();
 // post.getPosts().then(console.log);
 
-// Examples
-// post.createPost({
+// createPost({
 //   title: "Example Post 4",
 //   body: "Example text in body 4",
 // });
