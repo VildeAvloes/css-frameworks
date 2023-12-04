@@ -6,7 +6,6 @@ const method = "post";
 
 export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
-  console.log(loginURL);
 
   const response = await fetch(loginURL, {
     headers: {
