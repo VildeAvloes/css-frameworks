@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../dist/css/styles.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
+      defer
     ></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
   </head>
   <body class="row gx-0">
     <div class="col-12 col-md-3 bg-light">
+      <!-- nav -->
       <nav
         class="navbar navbar-expand-md bg-light d-md-flex flex-column align-items-start sticky-md-top"
       >
@@ -62,6 +63,7 @@
     </div>
 
     <section class="col-12 col-md-9 justify-content-center px-3">
+      <!-- profile info -->
       <div class="row py-4 align-items-center">
         <div class="col-4">
           <img
@@ -83,6 +85,7 @@
         </div>
       </div>
       <div>
+        <!-- Tab navigation -->
         <nav
           class="navbar justify-content-center"
           aria-labelledby="Content navigation"
@@ -136,6 +139,7 @@
           </ul>
         </nav>
 
+        <!-- My posts -->
         <div class="tab-content" id="profileContent">
           <div
             class="tab-pane fade show active"
@@ -182,117 +186,11 @@
                     </p>
                   </div>
                 </li>
-
-                <li class="card py-2 my-3">
-                  <div class="align-items-center mb-3 mx-2">
-                    <div class="row align-items-center">
-                      <div class="col-3 col-md-2">
-                        <img
-                          src="/src/assets/profile/woman-profile.jpg"
-                          alt="Young woman with long and curly brown hair."
-                          class="rounded-circle w-100"
-                        />
-                      </div>
-                      <p class="card-title fs-5 col-5">tigerlily</p>
-                    </div>
-                  </div>
-                  <img
-                    src="/src/assets/posts/dawn.jpg"
-                    alt="A road in the morning fog with brown and orange grass and bare trees on each side."
-                    class="img-fluid"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-heart fs-4 me-2"></i>
-                      <i class="bi bi-chat-right fs-4 ms-2"></i>
-                    </div>
-                    <p class="card-text">
-                      Mornings are the best! So peaceful and beautiful.
-                      <span class="fw-bold"
-                        >#morning #fall #road #early #fog #nature #silent</span
-                      >
-                    </p>
-                    <p class="card-text">
-                      <small class="text-muted">2 days ago</small>
-                    </p>
-                  </div>
-                </li>
-                <li class="card py-2 my-3">
-                  <div class="align-items-center mb-3 mx-2">
-                    <div class="row align-items-center">
-                      <div class="col-3 col-md-2">
-                        <img
-                          src="/src/assets/profile/woman-profile.jpg"
-                          alt="Young woman with long and curly brown hair."
-                          class="rounded-circle w-100"
-                        />
-                      </div>
-                      <p class="card-title fs-5 col-5">tigerlily</p>
-                    </div>
-                  </div>
-                  <img
-                    src="/src/assets/posts/fall-tree.jpg"
-                    alt="A big tree with orange and brown leaves with other trees in the background."
-                    class="img-fluid"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-heart fs-4 me-2"></i>
-                      <i class="bi bi-chat-right fs-4 ms-2"></i>
-                    </div>
-                    <p class="card-text">
-                      Finally fall is here. A bit faster some places than
-                      others, but I can't wait to wear knits and coats again. I
-                      just love the colours that nature has to offer in the
-                      fall.
-                      <span class="fw-bold"
-                        >#fall #tree #nature #orange #cosy
-                      </span>
-                    </p>
-                    <p class="card-text">
-                      <small class="text-muted">1 week ago</small>
-                    </p>
-                  </div>
-                </li>
-                <li class="card py-2 my-3">
-                  <div class="align-items-center mb-3 mx-2">
-                    <div class="row align-items-center">
-                      <div class="col-3 col-md-2">
-                        <img
-                          src="/src/assets/profile/woman-profile.jpg"
-                          alt="Young woman with long and curly brown hair."
-                          class="rounded-circle w-100"
-                        />
-                      </div>
-                      <p class="card-title fs-5 col-5">tigerlily</p>
-                    </div>
-                  </div>
-                  <img
-                    src="/src/assets/posts/beach.jpg"
-                    alt="Beach at sunday with skies and seagulls flying over"
-                    class="img-fluid"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-heart fs-4 me-2"></i>
-                      <i class="bi bi-chat-right fs-4 ms-2"></i>
-                    </div>
-                    <p class="card-text">
-                      Soaking up the last day of summer mornings. This one's
-                      taken this morning on my last day of holiday.
-                      <span class="fw-bold"
-                        >#beach #summer #seagulls #ocean #blue #nature</span
-                      >
-                    </p>
-                    <p class="card-text">
-                      <small class="text-muted">1 month ago</small>
-                    </p>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
 
+          <!-- Following  -->
           <div
             class="tab-pane fade"
             id="following"
@@ -419,6 +317,7 @@
             </div>
           </div>
 
+          <!-- Followers -->
           <div
             class="tab-pane fade"
             id="followers"
