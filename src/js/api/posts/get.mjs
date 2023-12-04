@@ -8,7 +8,9 @@ export async function getPosts() {
 
   const response = await authFetch(getPostsURL);
 
-  return await response.json();
+  const posts = await response.json();
+
+  return posts;
 }
 
 export async function getPost(id) {
@@ -20,5 +22,6 @@ export async function getPost(id) {
 
   const response = await authFetch(getPostURL);
 
-  return await response.json();
+  const postByID = await response.json();
+  return postByID;
 }
