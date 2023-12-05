@@ -14,5 +14,5 @@ export async function createPost(postData) {
 
   const newPost = await response.json();
 
-  return newPost;
+  return console.log(newPost);
 }

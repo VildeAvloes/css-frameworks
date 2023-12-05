@@ -1,5 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
-// import { createPost } from "./api/posts/create.mjs";
+import { createPost } from "./api/posts/create.mjs";
 // import * as postMethods from "./api/posts/index.mjs";
 // import * as templates from "./templates/index.mjs";
 
@@ -39,10 +39,10 @@ if (path === "/profile/login/") {
 // post.getPost();
 // post.getPosts().then(console.log);
 
-// createPost({
-//   title: "Example Post 4",
-//   body: "Example text in body 4",
-// });
+createPost({
+  title: "Example Post 4",
+  body: "Example text in body 4",
+});
 
 // updatePost({
 //     id: 8932,
