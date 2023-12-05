@@ -11,14 +11,14 @@ if (path === "/profile/login/") {
   setRegisterFormListener();
 }
 
-async function testTemplates() {
-  const posts = await postMethods.getPosts();
-  const post = posts[45];
-  const container = document.querySelector("#postFeed");
-  templates.renderPostTemplates(posts, container);
-}
+// async function testTemplates() {
+//   const posts = await postMethods.getPosts();
+//   const post = posts[45];
+//   const container = document.querySelector("#postFeed");
+//   templates.renderPostTemplates(posts, container);
+// }
 
-testTemplates();
+// testTemplates();
 
 // async function testTemplate() {
 //   const posts = await postMethods.getPosts();
