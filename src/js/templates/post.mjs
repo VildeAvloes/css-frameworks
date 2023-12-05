@@ -38,11 +38,11 @@ export function renderPostTemplates(postDataList, parent) {
   console.log(postDataList);
 }
 
-export async function testTemplates() {
-  const posts = await postMethods.getPosts();
-  const post = posts[45];
-  const container = document.querySelector("#postFeed");
-  templates.renderPostTemplates(posts, container);
-}
+// export async function testTemplates() {
+//   const posts = await postMethods.getPosts();
+//   const post = posts[45];
+//   const container = document.querySelector("#postFeed");
+//   templates.renderPostTemplates(posts, container);
+// }
 
-testTemplates();
+// testTemplates();
