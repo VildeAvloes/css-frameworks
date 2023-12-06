@@ -14,6 +14,10 @@ export function setUpdatePostFormListener() {
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
+      if (post.tags) {
+        post.tags = post.tags.split(" , ").map((tag) => tag.trim());
+      }
+
       updatePost(post);
     });
   }
