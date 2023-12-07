@@ -14,14 +14,13 @@ if (path === "/profile/login/") {
   listeners.setUpdatePostFormListener();
 }
 
-// async function testTemplates() {
-//   const posts = await postMethods.getPosts();
-//   const post = posts[45];
-//   const container = document.querySelector("#postFeed");
-//   templates.renderPostTemplates(posts, container);
-// }
+async function testTemplates() {
+  const posts = await postMethods.getPosts();
+  const container = document.querySelector("#postFeed");
+  templates.renderPostTemplates(posts, container);
+}
 
-// testTemplates();
+testTemplates();
 
 // async function testTemplate() {
 //   const posts = await postMethods.getPosts();
@@ -31,12 +30,6 @@ if (path === "/profile/login/") {
 // }
 
 // testTemplate();
-
-// post.createPost();
-// post.updatePost();
-// post.removePost();
-// post.getPost();
-// post.getPosts().then(console.log);
 
 // postMethods.createPost({
 //   title: "Example Post 4",
