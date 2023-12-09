@@ -1,17 +1,46 @@
+import * as postMethods from "../api/posts/index.mjs";
+
+function getQueryStringParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+export function formatDateString(dateString) {
+  const date = new Date(dateString);
+
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+
+  const formattedDate = date.toLocaleString("en-US", options);
+
+  return formattedDate;
+}
+
 export function postTemplate(postData) {
   console.log(postData);
-  const listElement = document.createElement("li");
-  listElement.classList.add("card", "py-2", "my-3");
-  listElement.id = postData.id;
 
-  const postURL = document.createElement("a");
-  postURL.classList.add("stretched-link");
-  postURL.href = `post/index/id?=${postData.id}`;
-  listElement.appendChild(postURL);
+  let postDetails;
+  if (location.pathname === "/feed/") {
+    postDetails = document.createElement("li");
+    const postURL = document.createElement("a");
+    postURL.classList.add("stretched-link");
+    postURL.href = `/feed/post/?id=${postData.id}`;
+    postDetails.appendChild(postURL);
+  } else {
+    postDetails = document.createElement("div");
+  }
+  postDetails.classList.add("card", "py-2", "my-3");
+  postDetails.id = postData.id;
 
   // const postHeaderWrapper = document.createElement("div");
   // authorHeader.classList.add("row", "align-items-center", "mb-3", "mx-2");
-  // listElement.appendChild(postHeaderWrapper);
+  // postDetails.appendChild(postHeaderWrapper);
 
   // const authorImgWrapper = document.createElement("div");
   // authorContentWrapper.classList.add("col-3", "col-md-2");
@@ -30,7 +59,7 @@ export function postTemplate(postData) {
 
   const post = document.createElement("div");
   post.classList.add("mb-3", "mx-2", "py-2", "my-3");
-  listElement.appendChild(post);
+  postDetails.appendChild(post);
 
   if (postData.title) {
     const title = document.createElement("p");
@@ -65,18 +94,17 @@ export function postTemplate(postData) {
     post.appendChild(tags);
   }
 
-  if (postData.created) {
+  if (postData.updated) {
+    const dateString = postData.updated;
+    const formattedDate = formatDateString(dateString);
+
     const timeWrapper = document.createElement("p");
     timeWrapper.classList.add("card-text");
     post.appendChild(timeWrapper);
 
     const time = document.createElement("small");
     time.classList.add("text-muted");
-    if (postData.updated) {
-      time.innerHTML = `Updated: ${postData.updated}`;
-    } else {
-      time.innerHTML = `Posted: ${postData.created}`;
-    }
+    time.innerHTML = `Posted: ${formattedDate}`;
     timeWrapper.appendChild(time);
   }
 
@@ -90,23 +118,32 @@ export function postTemplate(postData) {
   reactionsWrapper.appendChild(reactions);
   reactionsWrapper.appendChild(comments);
 
-  return listElement;
+  return postDetails;
 }
 
-export function renderPostTemplate(postData, parent) {
-  parent.append(postTemplate(postData));
+export async function renderPosts() {
+  const posts = await postMethods.getPosts();
+  const container = document.querySelector("#postFeed");
+
+  container.innerHTML = "";
+
+  container.append(...posts.map(postTemplate));
+  console.log(posts);
 }
 
-export function renderPostTemplates(postDataList, parent) {
-  parent.append(...postDataList.map(postTemplate));
-  console.log(postDataList);
+renderPosts();
+
+export async function renderPost() {
+  const postId = getQueryStringParam("id");
+  const container = document.querySelector("#postByID");
+  const postById = await postMethods.getPost(postId);
+
+  const renderPostTemplate = (postData, id) => {
+    container.innerHTML = "";
+    container.append(postTemplate(postData, id));
+  };
+
+  renderPostTemplate(postById);
 }
 
-// export async function testTemplates() {
-//   const posts = await postMethods.getPosts();
-//   const post = posts[45];
-//   const container = document.querySelector("#postFeed");
-//   templates.renderPostTemplates(posts, container);
-// }
-
-// testTemplates();
+renderPost();
