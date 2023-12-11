@@ -3,6 +3,7 @@ import * as component from "../templates/components.mjs";
 
 export function postTemplate(postData) {
   console.log(postData);
+  console.log(postData.author);
 
   let postDetails;
   if (location.pathname === "/feed/") {
@@ -17,24 +18,28 @@ export function postTemplate(postData) {
   postDetails.classList.add("card", "py-2", "my-3");
   postDetails.id = postData.id;
 
-  // const postHeaderWrapper = document.createElement("div");
-  // authorHeader.classList.add("row", "align-items-center", "mb-3", "mx-2");
-  // postDetails.appendChild(postHeaderWrapper);
+  const postHeader = document.createElement("div");
+  postHeader.classList.add("align-items-center", "mb-3", "mx-2");
+  postDetails.appendChild(postHeader);
 
-  // const authorImgWrapper = document.createElement("div");
-  // authorContentWrapper.classList.add("col-3", "col-md-2");
-  // postHeaderWrapper.appendChild(authorImgWrapper);
+  // if (postData.author.avatar) {
+  //   const authorImgWrapper = document.createElement("div");
+  //   authorImgWrapper.classList.add("col-3", "col-md-2");
+  //   postHeader.appendChild(authorImgWrapper);
 
-  // const authorImg = document.createElement("img");
-  // img.classList.add("rounded-circle", "w-100");
-  // img.src = postData.media;
-  // img.alt = `Profilephoto for ${postData.user}`;
-  // authorImgWrapper.appendChild(authorImg);
+  //   const authorImg = document.createElement("img");
+  //   authorImg.classList.add("rounded-circle", "w-100");
+  //   authorImg.src = postData.author.avatar;
+  //   authorImg.alt = `Image from ${postData.author.avatar}`;
+  //   authorImgWrapper.appendChild(authorImg);
+  // } else {
+  //   authorImg.src = "";
+  // }
 
-  // const authorUserName = document.createElement("p");
-  // authorUserName.classList.add("card-title", "fs-5", "col-5");
-  // authorUserName.innerHTML = postData.user;
-  // postHeaderWrapper.appendChild(authorUserName);
+  const authorUserName = document.createElement("p");
+  authorUserName.classList.add("card-title", "fs-5");
+  authorUserName.innerHTML = `@ ${postData.author.name}`;
+  postHeader.appendChild(authorUserName);
 
   const post = document.createElement("div");
   post.classList.add("mb-3", "mx-2", "py-2", "my-3");
