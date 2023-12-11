@@ -1,26 +1,5 @@
 import * as postMethods from "../api/posts/index.mjs";
-
-function getQueryStringParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
-
-export function formatDateString(dateString) {
-  const date = new Date(dateString);
-
-  const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  };
-
-  const formattedDate = date.toLocaleString("en-US", options);
-
-  return formattedDate;
-}
+import * as component from "../templates/components.mjs";
 
 export function postTemplate(postData) {
   console.log(postData);
@@ -76,11 +55,11 @@ export function postTemplate(postData) {
     post.appendChild(img);
   }
 
-  if (postData.body) {
-    const bodyWrapper = document.createElement("div");
-    bodyWrapper.classList.add("card-body");
-    post.appendChild(bodyWrapper);
+  const bodyWrapper = document.createElement("div");
+  bodyWrapper.classList.add("card-body");
+  post.appendChild(bodyWrapper);
 
+  if (postData.body) {
     const body = document.createElement("p");
     body.classList.add("card-text");
     body.innerHTML = postData.body;
@@ -91,12 +70,22 @@ export function postTemplate(postData) {
     const tags = document.createElement("span");
     tags.classList.add("fw-bold");
     tags.innerHTML = postData.tags;
-    post.appendChild(tags);
+    bodyWrapper.appendChild(tags);
   }
+
+  const reactionsWrapper = document.createElement("div");
+  reactionsWrapper.classList.add("d-flex", "align-items-center", "my-2");
+  post.appendChild(reactionsWrapper);
+  const reactions = document.createElement("i");
+  reactions.classList.add("bi", "bi-heart", "fs-4", "me-2");
+  const comments = document.createElement("i");
+  comments.classList.add("bi", "bi-chat-right", "fs-4", "ms-2");
+  reactionsWrapper.appendChild(reactions);
+  reactionsWrapper.appendChild(comments);
 
   if (postData.updated) {
     const dateString = postData.updated;
-    const formattedDate = formatDateString(dateString);
+    const formattedDate = component.formatDateString(dateString);
 
     const timeWrapper = document.createElement("p");
     timeWrapper.classList.add("card-text");
@@ -107,16 +96,6 @@ export function postTemplate(postData) {
     time.innerHTML = `Posted: ${formattedDate}`;
     timeWrapper.appendChild(time);
   }
-
-  const reactionsWrapper = document.createElement("div");
-  reactionsWrapper.classList.add("d-flex", "align-items-center", "mb-2");
-  post.appendChild(reactionsWrapper);
-  const reactions = document.createElement("i");
-  reactions.classList.add("bi", "bi-heart", "fs-4", "me-2");
-  const comments = document.createElement("i");
-  comments.classList.add("bi", "bi-chat-right", "fs-4", "ms-2");
-  reactionsWrapper.appendChild(reactions);
-  reactionsWrapper.appendChild(comments);
 
   return postDetails;
 }
@@ -134,7 +113,7 @@ export async function renderPosts() {
 renderPosts();
 
 export async function renderPost() {
-  const postId = getQueryStringParam("id");
+  const postId = component.getQueryStringParam("id");
   const container = document.querySelector("#postByID");
   const postById = await postMethods.getPost(postId);
 
