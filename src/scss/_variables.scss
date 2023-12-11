@@ -15,3 +15,9 @@ $card-border-color: $light;
 $link-color: $primary;
 $link-hover-color: $secondary;
 $link-decoration: none;
+
+//Forms
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
