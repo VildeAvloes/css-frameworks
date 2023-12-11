@@ -16,5 +16,6 @@ export async function createPost(postData) {
 
   console.log(createPostURL);
   console.log("newPost:", newPost);
+  window.location.href = "/feed";
   return newPost;
 }

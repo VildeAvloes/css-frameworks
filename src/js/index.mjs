@@ -1,5 +1,4 @@
 import * as listeners from "./handlers/index.mjs";
-import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
 
 const path = location.pathname;
@@ -12,16 +11,11 @@ if (path === "/profile/login/") {
   listeners.setCreatePostFormListener();
 } else if (path === "/post/edit/") {
   listeners.setUpdatePostFormListener();
+} else if (path === "/feed/") {
+  templates.renderPosts();
+} else if (path === "/feed/post/") {
+  templates.renderPost();
 }
-
-// async function testTemplates() {
-//   const posts = await postMethods.getPosts();
-//   const post = posts[45];
-//   const container = document.querySelector("#postFeed");
-//   templates.renderPostTemplates(posts, container);
-// }
-
-// testTemplates();
 
 // async function testTemplate() {
 //   const posts = await postMethods.getPosts();
@@ -31,12 +25,6 @@ if (path === "/profile/login/") {
 // }
 
 // testTemplate();
-
-// post.createPost();
-// post.updatePost();
-// post.removePost();
-// post.getPost();
-// post.getPosts().then(console.log);
 
 // postMethods.createPost({
 //   title: "Example Post 4",
