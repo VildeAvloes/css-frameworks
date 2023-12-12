@@ -13,6 +13,7 @@ if (path === "/profile/login/") {
   listeners.setUpdatePostFormListener();
 } else if (path === "/profile/edit/") {
   listeners.setUpdateProfileListener();
+  listeners.setDeletePostListener();
 } else if (path === "/feed/") {
   templates.renderProfileThumbnail();
   templates.renderPosts();

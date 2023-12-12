@@ -1,7 +1,10 @@
 import * as postMethods from "../../api/posts/index.mjs";
 import * as component from "../components.mjs";
+import { load } from "../../storage/index.mjs";
 
 export function postTemplate(postData) {
+  const profile = load("profile");
+
   let postDetails;
 
   if (location.pathname === "/feed/") {
@@ -17,7 +20,7 @@ export function postTemplate(postData) {
   postDetails.id = postData.id;
 
   const postHeader = document.createElement("div");
-  postHeader.classList.add("row", "align-items-center", "mx-2");
+  postHeader.classList.add("row", "align-items-center", "mx-1");
   postDetails.appendChild(postHeader);
 
   const authorAvatarWrapper = document.createElement("div");
@@ -42,8 +45,20 @@ export function postTemplate(postData) {
   authorUserName.innerHTML = `@ ${postData.author.name}`;
   postHeader.appendChild(authorUserName);
 
+  if (
+    location.pathname === `/feed/post/` &&
+    postData.author.name === profile.name
+  ) {
+    const editButton = document.createElement("a");
+    editButton.id = "editPostButton";
+    editButton.href = `/post/edit/?id=${postData.id}`;
+    editButton.classList.add("btn", "button-sm", "btn-secondary", "col-3");
+    editButton.innerHTML = `Edit <i class="bi bi-pencil"></i>`;
+    postHeader.appendChild(editButton);
+  }
+
   const post = document.createElement("div");
-  post.classList.add("mb-3", "mx-2", "py-2", "my-3");
+  post.classList.add("mb-3", "mx-2", "p-2", "my-3");
   postDetails.appendChild(post);
 
   if (postData.title) {
