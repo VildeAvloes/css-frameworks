@@ -14,7 +14,7 @@ export async function setUpdatePostFormListener() {
 
     form.title.value = post.title;
     form.body.value = post.body;
-    form.tags.valu = post.tags;
+    form.tags.value = post.tags;
     form.media.value = post.media;
 
     button.disabled = false;
@@ -30,6 +30,7 @@ export async function setUpdatePostFormListener() {
         post.tags = post.tags.split(" , ").map((tag) => tag.trim());
       }
 
+      alert("Your post was successfully updated!");
       updatePost(post);
     });
   }
