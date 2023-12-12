@@ -1,10 +1,9 @@
-import * as postMethods from "../api/posts/index.mjs";
-import * as component from "../templates/components.mjs";
+import * as postMethods from "../../api/posts/index.mjs";
+import * as component from "../components.mjs";
 
 export function postTemplate(postData) {
-  console.log(postData);
-
   let postDetails;
+
   if (location.pathname === "/feed/") {
     postDetails = document.createElement("li");
     const postURL = document.createElement("a");
@@ -17,24 +16,31 @@ export function postTemplate(postData) {
   postDetails.classList.add("card", "py-2", "my-3");
   postDetails.id = postData.id;
 
-  // const postHeaderWrapper = document.createElement("div");
-  // authorHeader.classList.add("row", "align-items-center", "mb-3", "mx-2");
-  // postDetails.appendChild(postHeaderWrapper);
+  const postHeader = document.createElement("div");
+  postHeader.classList.add("row", "align-items-center", "mx-2");
+  postDetails.appendChild(postHeader);
 
-  // const authorImgWrapper = document.createElement("div");
-  // authorContentWrapper.classList.add("col-3", "col-md-2");
-  // postHeaderWrapper.appendChild(authorImgWrapper);
+  const authorAvatarWrapper = document.createElement("div");
+  authorAvatarWrapper.classList.add("col-2", "col-md-3");
+  postHeader.appendChild(authorAvatarWrapper);
 
-  // const authorImg = document.createElement("img");
-  // img.classList.add("rounded-circle", "w-100");
-  // img.src = postData.media;
-  // img.alt = `Profilephoto for ${postData.user}`;
-  // authorImgWrapper.appendChild(authorImg);
+  const authorAvatar = document.createElement("img");
+  authorAvatar.classList.add("rounded", "w-100");
+  console.log(postData.author.avatar);
+  if (postData.author.avatar === null) {
+    authorAvatar.src = "/src/assets/images/profile-placeholder.png";
+    authorAvatar.alt = `Example avatar for ${postData.name}`;
+  } else {
+    authorAvatar.src = postData.author.avatar;
+    authorAvatar.alt = `Avatar for ${postData.name}`;
+  }
+  authorAvatarWrapper.appendChild(authorAvatar);
+  console.log(authorAvatar.src);
 
-  // const authorUserName = document.createElement("p");
-  // authorUserName.classList.add("card-title", "fs-5", "col-5");
-  // authorUserName.innerHTML = postData.user;
-  // postHeaderWrapper.appendChild(authorUserName);
+  const authorUserName = document.createElement("p");
+  authorUserName.classList.add("card-title", "fs-5", "col");
+  authorUserName.innerHTML = `@ ${postData.author.name}`;
+  postHeader.appendChild(authorUserName);
 
   const post = document.createElement("div");
   post.classList.add("mb-3", "mx-2", "py-2", "my-3");
@@ -48,11 +54,15 @@ export function postTemplate(postData) {
   }
 
   if (postData.media) {
+    const imgWrapper = document.createElement("div");
+    imgWrapper.classList.add("d-flex", "justify-content-center");
+    post.appendChild(imgWrapper);
+
     const img = document.createElement("img");
     img.classList.add("img-fluid");
     img.src = postData.media;
     img.alt = `Image from ${postData.title}`;
-    post.appendChild(img);
+    imgWrapper.appendChild(img);
   }
 
   const bodyWrapper = document.createElement("div");
@@ -116,6 +126,12 @@ export async function renderPost() {
   const postId = component.getQueryStringParam("id");
   const container = document.querySelector("#postByID");
   const postById = await postMethods.getPost(postId);
+
+  const titleElement = document.querySelector("title");
+
+  if (titleElement) {
+    titleElement.innerHTML = `${postById.title} | Hello!`;
+  }
 
   const renderPostTemplate = (postData, id) => {
     container.innerHTML = "";
