@@ -14,7 +14,9 @@ if (path === "/profile/login/") {
 } else if (path === "/profile/edit/") {
   listeners.setUpdateProfileListener();
 } else if (path === "/feed/") {
+  templates.renderProfileThumbnail();
   templates.renderPosts();
 } else if (path === "/feed/post/") {
+  templates.renderProfileThumbnail();
   templates.renderPost();
 }
