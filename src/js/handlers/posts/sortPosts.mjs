@@ -11,7 +11,6 @@ import { postTemplate, clearContainer } from "../../templates/index.mjs";
  */
 function sortPosts(posts, sortOrder) {
   if (sortOrder !== "oldest" && sortOrder !== "latest") {
-    console.log(sortOrder);
     return posts;
   }
 
