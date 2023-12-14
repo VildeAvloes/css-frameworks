@@ -1,5 +1,5 @@
 import { getPosts } from "../api/posts/index.mjs";
-import { postTemplate } from "../templates/index.mjs";
+import { postTemplate, clearContainer } from "../templates/index.mjs";
 
 export async function setSearchFormListener() {
   const form = document.querySelector("#searchForm");
@@ -21,11 +21,9 @@ export async function setSearchFormListener() {
             post.tags.some((tag) => tag.toLowerCase().includes(searchTerm)))
       );
 
-      const container = document.querySelector("#postFeed");
-      container.innerHTML = "";
-      container.append(...filteredPosts.map(postTemplate));
+      const searchContainer = document.querySelector("#postFeed");
+      clearContainer(searchContainer);
+      searchContainer.append(...filteredPosts.map(postTemplate));
     });
   }
 }
-
-setSearchFormListener();

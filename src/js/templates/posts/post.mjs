@@ -1,5 +1,4 @@
-import * as postMethods from "../../api/posts/index.mjs";
-import * as component from "../components.mjs";
+import { formatDateString } from "../components.mjs";
 import { load } from "../../storage/index.mjs";
 
 export function postTemplate(postData) {
@@ -29,7 +28,7 @@ export function postTemplate(postData) {
 
   const authorAvatar = document.createElement("img");
   authorAvatar.classList.add("rounded", "w-100");
-  console.log(postData.author.avatar);
+
   if (postData.author.avatar === null) {
     authorAvatar.src = "/src/assets/images/profile-placeholder.png";
     authorAvatar.alt = `Example avatar for ${postData.name}`;
@@ -38,7 +37,6 @@ export function postTemplate(postData) {
     authorAvatar.alt = `Avatar for ${postData.name}`;
   }
   authorAvatarWrapper.appendChild(authorAvatar);
-  console.log(authorAvatar.src);
 
   const authorUserName = document.createElement("p");
   authorUserName.classList.add("card-title", "fs-5", "col");
@@ -110,7 +108,7 @@ export function postTemplate(postData) {
 
   if (postData.updated) {
     const dateString = postData.updated;
-    const formattedDate = component.formatDateString(dateString);
+    const formattedDate = formatDateString(dateString);
 
     const timeWrapper = document.createElement("p");
     timeWrapper.classList.add("card-text");
@@ -124,38 +122,3 @@ export function postTemplate(postData) {
 
   return postDetails;
 }
-
-export async function renderPosts() {
-  const posts = await postMethods.getPosts();
-  const container = document.querySelector("#postFeed");
-
-  container.innerHTML = "";
-
-  const postsWithContent = posts.filter((post) => post.title && post.body);
-
-  container.append(...postsWithContent.map(postTemplate));
-  console.log(posts);
-}
-
-renderPosts();
-
-export async function renderPost() {
-  const postId = component.getQueryStringParam("id");
-  const container = document.querySelector("#postByID");
-  const postById = await postMethods.getPost(postId);
-
-  const titleElement = document.querySelector("title");
-
-  if (titleElement) {
-    titleElement.innerHTML = `${postById.title} | Hello!`;
-  }
-
-  const renderPostTemplate = (postData, id) => {
-    container.innerHTML = "";
-    container.append(postTemplate(postData, id));
-  };
-
-  renderPostTemplate(postById);
-}
-
-renderPost();

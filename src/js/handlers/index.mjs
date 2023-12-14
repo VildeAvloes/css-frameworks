@@ -1,3 +1,6 @@
+export * from "./renderProfileThumbnail.mjs";
+export * from "./renderPosts.mjs";
+export * from "./renderPostByID.mjs";
 export * from "./createPost.mjs";
 export * from "./updatePost.mjs";
 export * from "./deletePost.mjs";
