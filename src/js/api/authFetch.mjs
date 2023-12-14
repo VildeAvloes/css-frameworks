@@ -10,8 +10,12 @@ export function headers() {
 }
 
 export async function authFetch(url, options = {}) {
-  return fetch(url, {
-    ...options,
-    headers: headers(),
-  });
+  try {
+    return fetch(url, {
+      ...options,
+      headers: headers(),
+    });
+  } catch (error) {
+    console.log(error, "Failed to fetch API");
+  }
 }
