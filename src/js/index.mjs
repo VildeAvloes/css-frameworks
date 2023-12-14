@@ -17,6 +17,7 @@ if (path === "/profile/login/") {
 } else if (path === "/feed/") {
   templates.renderProfileThumbnail();
   templates.renderPosts();
+  listeners.setSearchFormListener();
 } else if (path === "/feed/post/") {
   templates.renderProfileThumbnail();
   templates.renderPost();

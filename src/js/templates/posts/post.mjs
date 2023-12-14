@@ -131,7 +131,9 @@ export async function renderPosts() {
 
   container.innerHTML = "";
 
-  container.append(...posts.map(postTemplate));
+  const postsWithContent = posts.filter((post) => post.title && post.body);
+
+  container.append(...postsWithContent.map(postTemplate));
   console.log(posts);
 }
 
