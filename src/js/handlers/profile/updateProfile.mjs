@@ -1,6 +1,5 @@
-import { getProfile, updateProfile } from "../api/profiles/index.mjs";
-
-import { load } from "../storage/index.mjs";
+import { getProfile, updateProfile } from "../../api/profiles/index.mjs";
+import { load } from "../../storage/index.mjs";
 
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
@@ -22,14 +21,19 @@ export async function setUpdateProfileListener() {
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-      const profile = Object.fromEntries(formData.entries());
+      try {
+        const form = event.target;
+        const formData = new FormData(form);
+        const profile = Object.fromEntries(formData.entries());
 
-      profile.name = name;
-      profile.email = email;
+        profile.name = name;
+        profile.email = email;
 
-      updateProfile(profile);
+        updateProfile(profile);
+      } catch (error) {
+        console.log(error);
+        alert("Failed to update profile");
+      }
     });
   }
 }

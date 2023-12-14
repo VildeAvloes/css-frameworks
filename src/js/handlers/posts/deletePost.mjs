@@ -1,7 +1,6 @@
-import { getPost, removePost } from "../api/posts/index.mjs";
+import { getPost, removePost } from "../../api/posts/index.mjs";
 
 export async function setDeletePostListener() {
-  console.log("testing");
   const deleteButton = document.querySelector("#deleteButton");
 
   const url = new URL(location.href);

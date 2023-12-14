@@ -1,8 +1,3 @@
-export function getQueryStringParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
-
 export function formatDateString(dateString) {
   const date = new Date(dateString);
 
@@ -18,10 +13,4 @@ export function formatDateString(dateString) {
   const formattedDate = date.toLocaleString("en-US", options);
 
   return formattedDate;
-}
-
-export function clearContainer(container) {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
 }

@@ -1,5 +1,5 @@
-import { formatDateString } from "../components.mjs";
 import { load } from "../../storage/index.mjs";
+import { formatDateString } from "../../handlers/index.mjs";
 
 export function postTemplate(postData) {
   const profile = load("profile");

@@ -14,12 +14,8 @@ export async function createPost(postData) {
 
   const newPost = await response.json();
 
-  if (newPost.tags) {
-    newPost.tags = newPost.tags.split(" , ").map((tag) => tag.trim());
-  }
-
   console.log(createPostURL);
   console.log("newPost:", newPost);
-  // window.location.href = "/feed";
+
   return newPost;
 }
