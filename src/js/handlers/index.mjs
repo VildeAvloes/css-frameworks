@@ -10,5 +10,6 @@ export * from "./components/formatting.mjs";
 
 export * from "./profile/login.mjs";
 export * from "./profile/register.mjs";
+export * from "./profile/logout.mjs";
 export * from "./profile/renderProfileThumbnail.mjs";
 export * from "./profile/updateProfile.mjs";

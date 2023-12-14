@@ -13,20 +13,28 @@ export default function router() {
       listeners.renderProfileThumbnail();
       listeners.renderPosts();
       listeners.setSearchFormListener();
+      listeners.setLogOutListener();
       break;
     case "/feed/post/":
       listeners.renderProfileThumbnail();
       listeners.renderPost();
+      listeners.setLogOutListener();
       break;
     case "/post/create/":
       listeners.setCreatePostFormListener();
+      listeners.setLogOutListener();
       break;
     case "/post/edit/":
       listeners.setUpdatePostFormListener();
       listeners.setDeletePostListener();
+      listeners.setLogOutListener();
       break;
     case "/profile/edit/":
       listeners.setUpdateProfileListener();
+      listeners.setLogOutListener();
+      break;
+    case "/profile/":
+      listeners.setLogOutListener();
       break;
 
     default:
