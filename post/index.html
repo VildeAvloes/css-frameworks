@@ -64,10 +64,20 @@
     </div>
 
     <section class="col-12 col-md-6 flex-column justify-content-center px-3">
-      <div id="profileThumbnail"></div>
-      <form id="searchForm" class="d-flex mb-0 mt-3" role="search">
+      <div class="row mt-3 pb-3 align-items-center border-bottom">
+        <div class="col-2">
+          <img
+            src="/src/assets/profile/woman-profile.jpg"
+            alt="Profile photo for Tigerlily. A photo of a young woman with long and curly brown hair."
+            class="rounded-circle w-100"
+          />
+        </div>
+        <div class="col-8">
+          <h1 class="fw-light fs-5">@tigerlily</h1>
+        </div>
+      </div>
+      <form class="d-flex mb-0 mt-3" role="search">
         <input
-          id="searchInput"
           class="form-control me-2"
           type="search"
           placeholder="Search"
@@ -77,19 +87,17 @@
       </form>
       <div class="d-flex justify-content-between alig mt-3">
         <div>
-          <a
-            href="/post/create/"
+          <button
             class="btn btn-secondary"
-            tabindex="-1"
-            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#create-post"
           >
             <i class="bi bi-plus-lg me-1"></i>
             Create Post
-          </a>
+          </button>
         </div>
         <div class="dropdown">
           <button
-            id="sortButton"
             class="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -98,15 +106,13 @@
             Sort
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a id="latestButton" class="dropdown-item">Latest</a></li>
-            <li><a id="oldestButton" class="dropdown-item">Oldest</a></li>
+            <li><a class="dropdown-item" href="#">Latest</a></li>
+            <li><a class="dropdown-item" href="#">Oldest</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="row justify-content-center">
-        <ul class="ps-0 list-unstyled col-md-8 mt-3" id="postFeed"></ul>
-      </div>
+      <div class="row justify-content-center col-md-8 mt-3" id="post"></div>
     </section>
 
     <section class="col-12 col-md-3 d-none d-md-flex position-fixed end-0">
@@ -165,5 +171,51 @@
         </ul>
       </div>
     </section>
+
+    <div
+      class="modal fade"
+      id="create-post"
+      tabindex="-1"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <h2 class="modal-title">New post</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="/feed/index.html" class="needs-validation">
+              <div class="mb-4">
+                <label for="formFile" class="form-label">Image:</label>
+                <input class="form-control" type="file" id="formFile" />
+              </div>
+              <div class="mb-4">
+                <label for="text-content" class="form-label"> Text:</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  name="text-content"
+                  id="text-content"
+                >
+                </textarea>
+              </div>
+
+              <div class="mb-4">
+                <button type="submit" class="btn btn-secondary">
+                  Add post
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
