@@ -17,7 +17,7 @@ export async function register(profile) {
     });
 
     const registerUser = await response.json();
-    window.location.href = "/feed";
+    window.location.href = "/feed/ ";
     return registerUser;
   } catch (error) {
     console.log(error);
