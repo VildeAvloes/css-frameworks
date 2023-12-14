@@ -20,7 +20,7 @@
         class="navbar navbar-expand-md bg-light d-md-flex flex-column align-items-start sticky-md-top"
       >
         <div class="container-fluid pb-1">
-          <a class="navbar-brand" href="/feed/index.html">
+          <a class="navbar-brand" href="/feed/">
             <span class="text-secondary fw-bold display-5">Hello!</span>
           </a>
           <button
@@ -89,6 +89,7 @@
         </div>
         <div class="dropdown">
           <button
+            id="sortButton"
             class="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -97,8 +98,8 @@
             Sort
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Latest</a></li>
-            <li><a class="dropdown-item" href="#">Oldest</a></li>
+            <li><a id="latestButton" class="dropdown-item">Latest</a></li>
+            <li><a id="oldestButton" class="dropdown-item">Oldest</a></li>
           </ul>
         </div>
       </div>

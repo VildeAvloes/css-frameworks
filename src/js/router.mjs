@@ -13,6 +13,7 @@ export default function router() {
       listeners.renderProfileThumbnail();
       listeners.renderPosts();
       listeners.setSearchFormListener();
+      listeners.setSortButtonListeners();
       listeners.setLogOutListener();
       break;
     case "/feed/post/":
