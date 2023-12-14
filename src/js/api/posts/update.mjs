@@ -16,6 +16,5 @@ export async function updatePost(postData) {
     body: JSON.stringify(postData),
   });
 
-  window.location.href = `/feed/post/?id=${postData.id}`;
   return await response.json();
 }

@@ -1,6 +1,3 @@
-import { getProfile } from "../../api/profiles/index.mjs";
-import { load } from "../../storage/index.mjs";
-
 export function profileThumbnailTemplate(profileData) {
   const profileThumbnail = document.createElement("div");
   profileThumbnail.classList.add(
@@ -32,14 +29,3 @@ export function profileThumbnailTemplate(profileData) {
 
   return profileThumbnail;
 }
-
-export async function renderProfileThumbnail() {
-  const { name } = load("profile");
-  const profile = await getProfile(name);
-
-  const container = document.querySelector("#profileThumbnail");
-  container.innerHTML = "";
-  container.append(profileThumbnailTemplate(profile));
-}
-
-renderProfileThumbnail();

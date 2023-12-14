@@ -1,7 +1,14 @@
-export * from "./createPost.mjs";
-export * from "./updatePost.mjs";
-export * from "./deletePost.mjs";
-export * from "./login.mjs";
-export * from "./register.mjs";
-export * from "./updateProfile.mjs";
-export * from "./search.mjs";
+export * from "./posts/renderPosts.mjs";
+export * from "./posts/renderPostByID.mjs";
+export * from "./posts/createPost.mjs";
+export * from "./posts/deletePost.mjs";
+export * from "./posts/updatePost.mjs";
+export * from "./posts/search.mjs";
+
+export * from "./components/getParams.mjs";
+export * from "./components/formatting.mjs";
+
+export * from "./profile/login.mjs";
+export * from "./profile/register.mjs";
+export * from "./profile/renderProfileThumbnail.mjs";
+export * from "./profile/updateProfile.mjs";

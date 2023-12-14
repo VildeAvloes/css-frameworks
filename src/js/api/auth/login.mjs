@@ -19,11 +19,14 @@ export async function login(profile) {
 
     const { accessToken, ...profileUser } = await response.json();
 
-    storage.save("token", accessToken);
-    storage.save("profile", profileUser);
-    window.location.href = "/feed";
+    if (profileUser && accessToken) {
+      storage.save("token", accessToken);
+      storage.save("profile", profileUser);
+      window.location.href = "/feed";
+    } else {
+      alert("User is not registered.");
+    }
   } catch (error) {
     console.log(error);
-    alert("Failed to login. Check your email and password.");
   }
 }
