@@ -2,6 +2,14 @@ import { getPost } from "../../api/posts/get.mjs";
 import { getQueryStringParam } from "../../handlers/index.mjs";
 import { clearContainer, postTemplate } from "../../templates/index.mjs";
 
+/**
+ * Renders a single post by ID from the query string,
+ * updating the title element, and rendering the post in the postTemplate
+ * in the container.
+ * @async
+ * @function
+ * @returns {void}
+ */
 export async function renderPost() {
   try {
     const postId = getQueryStringParam("id");
@@ -21,6 +29,6 @@ export async function renderPost() {
 
     renderPostTemplate(postById);
   } catch (error) {
-    console.log(error, "Failed to render post by ID.");
+    console.error(error, "Failed to render post by ID.");
   }
 }

@@ -1,5 +1,15 @@
 import { getPost, updatePost } from "../../api/posts/index.mjs";
 
+/**
+ * Sets a form listener for updating posts.
+ * Gets the HTML element and post ID, extraxts data from the form fields.
+ * Split tags if they are present.
+ * Sends an alert to the user if something goes wrong.
+ *
+ * @async
+ * @function
+ * @throws {Error} If there is an issue fetching the post details from the social API.
+ */
 export async function setUpdatePostFormListener() {
   const form = document.querySelector("#updatePost");
 
@@ -37,7 +47,7 @@ export async function setUpdatePostFormListener() {
         alert("Your post was successfully updated!");
         window.location.href = `/feed/post/?id=${post.id}`;
       } catch (error) {
-        console.log(error);
+        console.error(error);
         alert("Failed to update post.");
       }
     });
