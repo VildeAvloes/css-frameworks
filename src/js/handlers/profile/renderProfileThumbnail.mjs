@@ -5,6 +5,13 @@ import {
   profileThumbnailTemplate,
 } from "../../templates/index.mjs";
 
+/**
+ * Renders the profile thumbnail in the thumbnail container.
+ *
+ * @async
+ * @function
+ * @throws {Error} If the rendering of the thumbnail fails.
+ */
 export async function renderProfileThumbnail() {
   try {
     const { name } = load("profile");
@@ -14,6 +21,6 @@ export async function renderProfileThumbnail() {
     clearContainer(thumbnailContainer);
     thumbnailContainer.append(profileThumbnailTemplate(profile));
   } catch (error) {
-    console.log(error, "Failed to render thumbnail.");
+    console.error(error, "Failed to render thumbnail.");
   }
 }

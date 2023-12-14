@@ -1,5 +1,14 @@
 import { getPost, removePost } from "../../api/posts/index.mjs";
 
+/**
+ * Sets a click event listener to the delete button for the user to delete post.
+ * Throws an alert for the user to confirm and sends a delete request.
+ * When post is deleted the user is redirected to feed page.
+ *
+ * @async
+ * @function
+ * @returns {void}
+ */
 export async function setDeletePostListener() {
   const deleteButton = document.querySelector("#deleteButton");
 
@@ -24,7 +33,8 @@ export async function setDeletePostListener() {
         }
       } else console.log("Post not found");
     } catch (error) {
-      console.log("Error deleting the post:", error);
+      console.error("Error deleting the post:", error);
+      alert("Error deleting post");
     }
   });
 }

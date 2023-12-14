@@ -1,6 +1,13 @@
 import { load } from "../../storage/index.mjs";
 import { formatDateString } from "../../handlers/index.mjs";
 
+/**
+ * Generates a HTML representation of a post pased on provided post data.
+ *
+ * @param {Object} postData - The data of the post to be displayed.
+ *
+ * @returns {HTMLElement} Returns the HTML element representing the post data.
+ */
 export function postTemplate(postData) {
   const profile = load("profile");
 

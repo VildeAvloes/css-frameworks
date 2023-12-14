@@ -5,6 +5,14 @@ import {
   clearContainer,
 } from "../../templates/index.mjs";
 
+/**
+ * A form listener for the search form to filter and render posts that includ the search
+ * term and render the result in the container in the feed using post template.
+ *
+ *  @async
+ * @function
+ * @returns {void}
+ */
 export async function setSearchFormListener() {
   const form = document.querySelector("#searchForm");
   const input = document.querySelector("#searchInput");
@@ -37,7 +45,7 @@ export async function setSearchFormListener() {
           searchContainer.append(...filteredPosts.map(postTemplate));
         }
       } catch (error) {
-        console.log(error, "Failed to render search results.");
+        console.error(error, "Failed to render search results.");
       }
     });
   }

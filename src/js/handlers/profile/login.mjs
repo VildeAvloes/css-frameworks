@@ -1,5 +1,11 @@
 import { login } from "../../api/auth/login.mjs";
 
+/**
+ * Sets a form listener on the log in form to handle the login submissions.
+ *
+ * @function
+ * @throws {Error} If there is an issue with the login process.
+ */
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
 
@@ -15,7 +21,7 @@ export function setLoginFormListener() {
       });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     alert("Failed to login. Check your email and password.");
   }
 }

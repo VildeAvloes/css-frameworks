@@ -1,6 +1,14 @@
 import { getPosts } from "../../api/posts/index.mjs";
 import { postTemplate, clearContainer } from "../../templates/index.mjs";
 
+/**
+ * Sorts an array of posts in order, the oldest or latest.
+ *
+ * @param {Array<object>} posts - The array of posts to be sorted
+ * @param {string} sortOrder - The order for the post to be sorted.
+ *
+ * @returns {Array<object>} Returns the post in a sorted array.
+ */
 function sortPosts(posts, sortOrder) {
   if (sortOrder !== "oldest" && sortOrder !== "latest") {
     console.log(sortOrder);
@@ -17,6 +25,14 @@ function sortPosts(posts, sortOrder) {
   return sortedPosts;
 }
 
+/**
+ * Set an event listener for the sort button, sorting latest or oldest posts.
+ *
+ * @async
+ * @function
+ *
+ * @throws {Error} If there is a problem with fetching the posts from the API.
+ */
 export async function setSortButtonListeners() {
   const latestButton = document.querySelector("#latestButton");
   const oldestButton = document.querySelector("#oldestButton");
@@ -26,6 +42,11 @@ export async function setSortButtonListeners() {
   try {
     const posts = await getPosts();
 
+    /**
+     * Renders the posts in the specified order and updates the container
+     * with the sorted posts.
+     * @param {string} sortOrder - The order which the posts should be sorted in
+     */
     function renderSortedPosts(sortOrder) {
       const sortedPosts = sortPosts(posts, sortOrder);
       clearContainer(sortedPostsContainer);
@@ -42,6 +63,6 @@ export async function setSortButtonListeners() {
       sortButton.textContent = "Oldest";
     });
   } catch (error) {
-    console.log(error, "Failed to sort posts");
+    console.error(error, "Failed to sort posts");
   }
 }

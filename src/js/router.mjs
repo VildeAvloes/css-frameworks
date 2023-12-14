@@ -1,5 +1,13 @@
 import * as listeners from "./handlers/index.mjs";
 
+/**
+ * Sets up a routing behavior for the event listeners based on the
+ * current URL path.
+ * The function ensures that the appropriate listeneres is being called
+ * on the correct pages and the correct actions are taken.
+ *
+ * @returns {void }
+ */
 export default function router() {
   const path = location.pathname;
   switch (path) {

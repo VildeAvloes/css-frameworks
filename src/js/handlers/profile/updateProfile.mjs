@@ -1,6 +1,15 @@
 import { getProfile, updateProfile } from "../../api/profiles/index.mjs";
 import { load } from "../../storage/index.mjs";
 
+/**
+ * Sets a form listener for updating profile.
+ * Gets existing profile data, populates the form and
+ * handles the form submission.
+ *
+ * @async
+ * @function
+ * @throws {Error} If there is an issue fetching the post details from the social API.
+ */
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
 
@@ -31,7 +40,7 @@ export async function setUpdateProfileListener() {
 
         updateProfile(profile);
       } catch (error) {
-        console.log(error);
+        console.error(error);
         alert("Failed to update profile");
       }
     });

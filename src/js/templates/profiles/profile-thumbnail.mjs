@@ -1,3 +1,10 @@
+/**
+ * Generates an HMTL representation of a profile thumbnail
+ * with the provided profile data
+ *
+ * @param {Object} profileData - The data of the profile to be displayed
+ * @returns {HTMLDivElement}  Returns an HTML element representing the profile data.
+ */
 export function profileThumbnailTemplate(profileData) {
   const profileThumbnail = document.createElement("div");
   profileThumbnail.classList.add(
